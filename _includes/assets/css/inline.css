@@ -209,7 +209,7 @@ article .flickity-button:hover {
     color: #47525d;
     font-style: italic;
     display: block;
-    margin-bottom: -10px;
+    margin-bottom: 10px;
     margin-top: -10px;
 }
 article img {
