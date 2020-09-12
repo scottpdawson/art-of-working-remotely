@@ -2,14 +2,56 @@
   <meta charset="utf-8">
   <link rel="dns-prefetch" href="https://identity.netlify.com">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title or renderData.title or metadata.title }}</title>
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link href="/_includes/assets/fa/css/all.css" rel="stylesheet">
+  <link rel="preconnect" href="//fonts.gstatic.com/" crossorigin>
+  <link href="//fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&family=Special+Elite&family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <title>{%- if title !== 'Welcome' -%}{{ title }} | The Art of Working Remotely{%- else -%}The Art of Working Remotely – How to Thrive in a Distributed Workplace{%- endif -%}</title>
+  {% set meta_description %}
+    {%- if description -%}{{ description }}{%- else -%}Whether you’ve been working remotely for many years, or are just starting out, you’ve realized that remote work can look very different. It depends on where you’re working. What you’re working on. Who you’re working for, and who you’re working with.{%- endif -%}
+  {% endset %}
+  <meta name="description" content="{{ meta_description }}"/>
+  <link rel="alternate" href="/feed.xml" title="The Art of Working Remotely" type="application/atom+xml">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@workingrem" />
+  <meta name="twitter:creator" content="@workingrem" />
+  <meta name="twitter:description" content="{{ meta_description }}"/>
+  {%- if category -%}
+  <meta property="og:url" content="https://artofworkingremotely.com/{{navigation | slug}}/{{category | slug}}/{{title | removeNonAlpha | slug}}/" />
+  {%- else -%}
+  <meta property="og:url" content="https://artofworkingremotely.com/{%- if permalink !== '/' -%}{{ permalink }}{%- endif -%}" />
+  {%- endif -%}
+  <meta property="og:title" content="{%- if title !== 'Welcome' -%}{{ title }} | The Art of Working Remotely{%- else -%}The Art of Working Remotely – How to Thrive in a Distributed Workplace{%- endif -%}" />
+  <meta property="og:description" content="{{ meta_description }}"/>
+  <meta property="og:image" content='https://artofworkingremotely.com/static/img/og-image.jpg' />
+  <meta property="og:image:width" content='1200' />
+  <meta property="og:image:height" content='630' />
+  <link rel="icon" type="image/png" sizes="512x512"  href="/static/img/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/static/img/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/apple-icon-180x180.png">
+  <script defer src="/_includes/assets/fa/js/all.js"></script>
+  <script defer src="/_includes/assets/js/search.js"></script>
+  <script defer src="/_includes/assets/js/flickity.pkgd.min.js"></script>
+  <script defer src="/_includes/assets/js/fullscreen.js"></script>
   {% set css %}
     {% include "assets/css/inline.css" %}
+    {% include "assets/css/flickity.min.css" %}
+    {% include "assets/css/fullscreen.css" %}
   {% endset %}
   <style>{{ css | cssmin | safe }}</style>
   {% set js %}
     {% include "assets/js/inline.js" %}
   {% endset %}
   <script>{{ js | jsmin | safe }}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3965818-20"></script>
+  <script>
+  if (document.location.hostname.search("artofworkingremotely.com") !== -1) {
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-3965818-20');
+  }
+  </script>
 </head>

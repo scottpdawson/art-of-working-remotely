@@ -4,28 +4,34 @@ section: post
 ---
 
 <article>
-  <h1>{{ title }}</h1>
-  <p>
-    <small>
-      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
-    </small>
-  </p>
+  {% if (hero) %}
+  <img class="page-hero lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 723 560'%3E%3C/svg%3E" data-src="{{ hero | heroImage }}" alt="Main image for {{ title }}" />
+  {% endif %}
 
-  {{ layoutContent | safe }}
+  {{ content | safe }}
 
-  {% if tags %}
-    <p>
-    {% for tag in tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-      {%- endif -%}
-    {% endfor %}
-    </p>
+  <hr />
+
+  {% if category %}
+    
+    {% set collectionName %}{{ category.toLowerCase() }}{% endset %}
+    {% set collectionSize %}{{ collections[collectionName].length }}{% endset %}
+  
+    {% if collectionSize > 1 %}
+
+      <h3>Similar Articles</h3>
+      <p>Check out <a href="/topics/{{ collectionName.toLowerCase() | url }}/">similar articles</a> in the <b>{{collectionName}}</b> category:</p>
+      <ul class="post-list">
+        {% set relatedPostsOutput = 0 %}
+        {%- for item in collections[collectionName] | reverse -%}
+        {% if relatedPostsOutput < 3 and item.url.indexOf( title | removeNonAlpha | slug ) === -1 %}
+        {% include '_includes/components/post-teaser-condensed.njk' %}
+        {% set relatedPostsOutput = relatedPostsOutput + 1 %}
+        {% endif %}
+        {%- endfor -%}
+      </ul>
+    {% endif %}
+
   {% endif %}
 
 </article>
-
-<nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
-</nav>

@@ -3,26 +3,39 @@ const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
 const slugify = require("slugify");
+const moment = require("moment");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
 
-  // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-  // Configuration API: use eleventyConfig.addLayoutAlias(from, to) to add
-  // layout aliases! Say you have a bunch of existing content using
-  // layout: post. If you don’t want to rewrite all of those values, just map
-  // post to a new file like this:
-  // eleventyConfig.addLayoutAlias("post", "layouts/my_new_post_layout.njk");
-
-  // Merge data instead of overriding
-  // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
+
+  eleventyConfig.addFilter("removeNonAlpha", text => {
+    return text.replace(/[^- 0-9a-z]/gi, '');
+  });  
+
+  eleventyConfig.addFilter("squash", require("./filters/squash.js") );
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
+  });
+
+  eleventyConfig.addFilter("momentDate", dateObj => {
+    return moment.utc(dateObj).format('MMMM D, YYYY');
+  });
+
+  eleventyConfig.addFilter("momentYear", dateObj => {
+    return moment.utc(dateObj).format('YYYY');
+  });
+
+  eleventyConfig.addFilter("getYearArray", collection => {
+    let yearArray = [];
+    collection.forEach((item) => {
+      yearArray.push(moment.utc(item.date).format('YYYY'));
+    });
+    return [...new Set(yearArray)];
   });
 
   // Date formatting (machine readable)
@@ -43,6 +56,108 @@ module.exports = function(eleventyConfig) {
       return code;
     }
     return minified.code;
+  });
+
+  eleventyConfig.addCollection("communication", (collection) => {
+    return collection.getFilteredByGlob("posts/*.md").filter( item => {
+      const category = item.data.category;
+      return ( category && category.toLowerCase() === "communication" ? item : false );
+    }); 
+  });
+
+  eleventyConfig.addCollection("discipline", (collection) => {
+    return collection.getFilteredByGlob("posts/*.md").filter( item => {
+      const category = item.data.category;
+      return ( category && category.toLowerCase() === "discipline" ? item : false );
+    }); 
+  });
+
+  eleventyConfig.addCollection("health", (collection) => {
+    return collection.getFilteredByGlob("posts/*.md").filter( item => {
+      const category = item.data.category;
+      return ( category && category.toLowerCase() === "health" ? item : false );
+    }); 
+  });
+
+  eleventyConfig.addCollection("performance", (collection) => {
+    return collection.getFilteredByGlob("posts/*.md").filter( item => {
+      const category = item.data.category;
+      return ( category && category.toLowerCase() === "performance" ? item : false );
+    }); 
+  });
+
+  eleventyConfig.addCollection("management", (collection) => {
+    return collection.getFilteredByGlob("posts/*.md").filter( item => {
+      const category = item.data.category;
+      return ( category && category.toLowerCase() === "management" ? item : false );
+    }); 
+  });
+
+  eleventyConfig.addCollection("professional development", (collection) => {
+    return collection.getFilteredByGlob("posts/*.md").filter( item => {
+      const category = item.data.category;
+      return ( category && category.toLowerCase() === "professional development" ? item : false );
+    }); 
+  });
+
+  eleventyConfig.addCollection("workspace", (collection) => {
+    return collection.getFilteredByGlob("posts/*.md").filter( item => {
+      const category = item.data.category;
+      return ( category && category.toLowerCase() === "workspace" ? item : false );
+    }); 
+  });
+  
+  eleventyConfig.addCollection("humor", (collection) => {
+    return collection.getFilteredByGlob("posts/*.md").filter( item => {
+      const category = item.data.category;
+      return ( category && category.toLowerCase() === "humor" ? item : false );
+    }); 
+  });
+
+  eleventyConfig.addCollection("news", (collection) => {
+    return collection.getFilteredByGlob("posts/*.md").filter( item => {
+      const category = item.data.category;
+      return ( category && category.toLowerCase() === "news" ? item : false );
+    }); 
+  });
+  
+  eleventyConfig.addCollection("allPosts", (collection) =>
+    collection.getFilteredByGlob("posts/*.md")
+  );
+
+  eleventyConfig.addCollection("tagList", require("./utils/getTagList.js"));
+
+  const embedVimeo = require("eleventy-plugin-vimeo-embed");
+  eleventyConfig.addPlugin(embedVimeo);
+
+  const pluginEmbedTweet = require("eleventy-plugin-embed-tweet");
+  let tweetEmbedOptions = {
+      useInlineStyles: true,
+      autoEmbed: true,
+  }
+  eleventyConfig.addPlugin(pluginEmbedTweet, tweetEmbedOptions);
+
+  const embedInstagram = require("eleventy-plugin-embed-instagram");
+  eleventyConfig.addPlugin(embedInstagram);
+
+  const pluginRss = require("@11ty/eleventy-plugin-rss");
+  eleventyConfig.addPlugin(pluginRss);
+
+  const readingTime = require('eleventy-plugin-reading-time');
+  eleventyConfig.addPlugin(readingTime);
+
+  eleventyConfig.addShortcode("picture", require("./utils/picture.js"));
+  eleventyConfig.addShortcode("pictureRt", require("./utils/pictureRt.js"));
+  eleventyConfig.addShortcode("pictureRtSm", require("./utils/pictureRtSm.js"));
+  eleventyConfig.addShortcode("githubGist", require("./utils/githubGist.js"));
+  eleventyConfig.addShortcode("currentYear", function() {
+    const year = new Date().getFullYear();
+    return `${year}`;
+  });
+
+  eleventyConfig.addShortcode("yearsRemoteWorking", function() {
+    const year = new Date().getFullYear();
+    return `${year-1998}`;
   });
 
   // Minify HTML output
@@ -67,15 +182,57 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addFilter('has_tag', function( arr, key, value ) {
+    return arr.filter( item => {
+        const keys = key.split( '.' );
+        const reduce = keys.reduce( ( object, key ) => {
+            return object[ key ];
+        }, item );
+        const str = String( reduce );
+
+        return ( str.includes( value ) ? item : false );
+    });
+  });
+
+  eleventyConfig.addFilter('lacks_tag', function( arr, key, value ) {
+    return arr.filter( item => {
+        const keys = key.split( '.' );
+        const reduce = keys.reduce( ( object, key ) => {
+            return object[ key ];
+        }, item );
+        const str = String( reduce );
+
+        return ( str.includes( value ) ? false : item );
+    });
+  });
+
+  eleventyConfig.addFilter('splitlines', function(input) {
+    const parts = input.split(' ')
+    const lines = parts.reduce(function(prev, current) {
+      if(!prev.length) {
+        return [current]
+      }
+      let lastOne = prev[prev.length - 1]
+      if(lastOne.length + current.length > 18) {
+        return [...prev, current]
+      }
+      prev[prev.length - 1] = lastOne + ' ' + current
+      return prev
+    }, [])
+    return lines
+  })
+
   // Don't process folders with static assets e.g. images
   eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("static/img");
+  eleventyConfig.addPassthroughCopy("static/");
+  eleventyConfig.addPassthroughCopy("images/");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_includes/assets/");
 
   /* Markdown Plugins */
   let markdownIt = require("markdown-it");
   let markdownItAnchor = require("markdown-it-anchor");
+  var markdownItAttrs = require('markdown-it-attrs');
   let options = {
     html: true,
     breaks: true,
@@ -87,18 +244,17 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.setLibrary("md", markdownIt(options)
     .use(markdownItAnchor, opts)
+    .use(markdownItAttrs, {
+      leftDelimiter: '{',
+      rightDelimiter: '}',
+      allowedAttributes: []  // empty array = all attributes are allowed
+    })
   );
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
-
-    // If your site lives in a different subdirectory, change this.
-    // Leading or trailing slashes are all normalized away, so don’t worry about it.
-    // If you don’t have a subdirectory, use "" or "/" (they do the same thing)
-    // This is only used for URLs (it does not affect your file structure)
     pathPrefix: "/",
-
-    markdownTemplateEngine: "liquid",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     dir: {

@@ -2,6 +2,24 @@
 layout: layouts/base.njk
 section: page
 ---
-<h1>{{ title }}</h1>
 
-{{ layoutContent | safe }}
+{% if (hero) %}
+<img class="page-hero lazy" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 723 560'%3E%3C/svg%3E" data-src="{{ hero | heroImage }}" alt="Main image for {{ title }}" />
+{% endif %}
+
+<article>
+{{ content | safe }}
+</article>
+
+{% if shouldShowPosts %}
+    {% set collectionName %}{{ title.toLowerCase() }}{% endset %}
+    {% set collectionSize %}{{ collections[collectionName].length }}{% endset %}
+
+    <h2>{{ title }} Articles</h2>
+    <ul class="post-list page-with-post-list">
+      {% set relatedPostsOutput = 0 %}
+      {%- for item in collections[collectionName] | reverse -%}
+      {% include '_includes/components/post-teaser-condensed.njk' %}
+      {%- endfor -%}
+    </ul>
+{% endif %}

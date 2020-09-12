@@ -1,6 +1,32 @@
 <footer>
-  <small>
-    This project is maintained by <a href="https://www.danurbanowicz.com">Dan Urbanowicz</a>.
-    Check out the <a href="{{ pkg.repository.url }}">GitHub repo</a>.
-  </small>
+  <div class="solid-footer">
+    <div class="footer-container">
+      <div>
+        <h4>Get the Book</h4>
+        <p><a href="/book"><img src="/static/img/cover-ipad-mock-e1563816270596.png" style="float:right; width: 170px; margin-left: 10px;"></a>Are you a fan of working remotely? Want to learn more? Check out a copy of <a href="/book">The Art of Working Remotely</a>.</p>
+        <h4>Join the mailing list</h4>
+        <p>You’ll get periodic updates on new additions to the site, the latest details about #RemoteChat and more. And we won’t spam you or sell your email, because that’s just shabby.</p>
+        <a style="border: 3px solid #dcad51; background: white; padding: 10px 20px; border-radius: 5px;" href="http://eepurl.com/dw045L">Subscribe Now</a>
+      </div>
+      <div>
+        <h4>Recent Posts</h4>
+        <ul class="post-list post-list-footer">
+          {%- for item in collections.allPosts | reverse  -%}
+          {% if loop.index <= 4 %}
+          {% include '_includes/components/post-teaser-condensed.njk' %}
+          {% endif %}
+          {%- endfor -%}
+        </ul>
+      </div>
+      <div>
+        <h4>About this Site</h4>
+        <p><img style="float: right; border-radius: 100px; width: 150px; height: 150px; margin-left: 20px;" src="/static/img/scott_dawson.jpg">I’m <a href="http://scottpdawson.com/">Scott Dawson</a>. I created this site to share my remote work expertise and foster a community around remote work.</p>
+        <p>I’ve been working remotely since 1998. That's {% yearsRemoteWorking %} years! Enjoy the site, and if you want to connect with other remote workers, feel free to jump into my weekly <a href="/remotechat/">#RemoteChat</a>!<br />
+        <a href="/about-this-site">Read more about this site and the author</p>      
+      </div>
+    </div>
+    <p class="disclaimer">
+    &copy;{% currentYear %} <a href="/contact">The Art of Working Remotely</a>. <a href="https://twitter.com/workingrem"><i class="fab fa-twitter"></i> @workingrem</a> 
+    <br />Want more? Subscribe to a <a href="/feed.xml">feed of this site's posts</a>.</p>
+  </div>
 </footer>

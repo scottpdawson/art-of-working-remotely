@@ -1,23 +1,46 @@
 <!doctype html>
 <html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
-
 	{% include "components/head.njk" %}
-
 	<body>
-
-		<header>
-			<em>
-				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
-			{% include "components/nav.njk" %}
-		</header>
-
-		<main>
-			{{ layoutContent | safe }}
-		</main>
-
-		{% include "components/footer.njk" %}
-
+		<div class="sidebar">
+			<header>
+				<div class="solid-header">
+					{% include "components/nav.njk" %}
+					{% include "components/search.njk" %}
+				</div>
+			</header>
+		</div>
+		<div class="main">
+			<div class="container">
+				<main>
+					<div class="page-details">
+						{% if category %}
+							<a class="category-header" href="/topics/{{ category | slug }}">
+								{% if category == "Communication" %}<i class="fas fa-microphone-alt"></i>{% endif %}
+								{% if category == "Discipline" %}<i class="fas fa-calendar-day"></i>{% endif %}
+								{% if category == "Health" %}<i class="fas fa-running"></i>{% endif %}
+								{% if category == "Performance" %}<i class="fas fa-flag-checkered"></i>{% endif %}
+								{% if category == "Management" %}<i class="fas fa-tasks"></i>{% endif %}
+								{% if category == "Professional Development" %}<i class="fas fa-chalkboard-teacher"></i>{% endif %}
+								{% if category == "Workspace" %}<i class="fas fa-swatchbook"></i>{% endif %}
+								{% if category == "Humor" %}<i class="fas fa-theater-masks"></i>{% endif %}
+								{{ category }}
+							</a>
+						{% endif %}
+						<h1>{{ title }}</h1>
+					</div>
+					{% if date %}
+						<span class="post-date">{{ date | momentDate }}</span>
+					{% endif %}
+					{{ content | safe }}
+				</main>
+			</div>
+			{% include "components/footer.njk" %}
+		</div>
+		<div class="search-ui invisible">
+			<button id="search-close"><i class="fas fa-times" title="Done"></i></button>
+			<input type="search" id="search-str" class="search-str" placeholder="search this site" />
+			<ol class="search-results"></ol>
+		</div>
 	</body>
-
 </html>

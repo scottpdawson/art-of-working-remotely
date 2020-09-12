@@ -1,10 +1,26 @@
-<nav>
-  {% set navPages = collections.all | eleventyNavigation %}
-  <ul>
-  {%- for entry in navPages %}
-    <li>
-      <a href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
-    </li>
-  {%- endfor %}
-  </ul>
-</nav>
+<div class="about">
+  <a href="/"><img src="/static/img/art_working_remotely_logo.png" class="avatar" title="The Art of Working Remotely" /></a>
+  <nav>
+    <ul class="nav nav-utility">
+      <li>
+        <a href="/search" id="search-link"><i class="nav-icon fas fa-search" title="Search this site"></i></a>
+      </li>
+      <li>
+        <a href="/contact" id="contact-link"><i class="nav-icon fas fa-envelope" title="Contact"></i></a>
+      </li>
+    </ul>
+    {% set navPages = collections.all | eleventyNavigation %}
+    <ul class="nav">
+    {%- for entry in navPages %}
+      <li>
+        <a href="{{ entry.url | url }}"{% if entry.url == page.url or navigation == entry.title %} class="active"{% endif %}>
+          <i class="nav-icon 
+          {% if entry.title == "Welcome" %}fas fa-home{% endif %}
+          "></i>
+          <span class="nav-title">{% if entry.title != "Welcome" %}{{ entry.title }}{% endif %}</span>
+        </a>
+      </li>
+    {%- endfor %}
+    </ul>
+  </nav>
+</div>
