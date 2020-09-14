@@ -32,7 +32,7 @@ Using the connective power of storytelling, Scott shares how his cumulative work
 <i>— Tammy Bjelland, founder and CEO of <a href="https://www.workplaceless.com/">Workplaceless</a></i>
 <br />
 <br />
-<img src="/static/img/Valentina-Thörner.jpg">
+<img src="/static/img/Valentina-Thorner.jpg">
 Scott has been working remotely longer than anyone I know. When he started working from home over two decades ago there were hardly any resources available. Distributed work wasn’t really a thing yet, co-working spaces were far and wide in between, and today’s communities around location independent jobs did not exist. But Scott knew what he wanted - so he had to figure out a way to make it work. I was lucky enough to get a pre-release of the book, and I loved it! Whether you are already working remote, or whether you are considering starting in a distributed company - this book will make you more productive and ensure that you don’t lose your personal life in the process. And if you lead (or plan to lead) a remote team, the book can help you to level up your team - you might even consider it required reading for every new hire.  
 <i>— Valentina Thörner, Head of Product at <a href="https://klausapp.com">Klaus</a></i>
     </div>
