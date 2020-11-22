@@ -2,9 +2,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/_includes/assets/fa/css/all.min.css" rel="stylesheet" media="print" onload="this.media='screen'">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Special+Elite|EB+Garamond:400,700,400i,700i|Oswald:400,700&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin />
+
+  <link rel="preload"
+        as="style"
+        href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Special+Elite|EB+Garamond:400,700,400i,700i|Oswald:400,700&display=swap" />
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Special+Elite|EB+Garamond:400,700,400i,700i|Oswald:400,700&display=swap"
+        media="print" onload="this.media='all'" />
+
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two|Special+Elite|EB+Garamond:400,700,400i,700i|Oswald:400,700&display=swap" />
+  </noscript>
   <title>{%- if title !== 'Welcome' -%}{{ title }} | The Art of Working Remotely{%- else -%}The Art of Working Remotely – How to Thrive in a Distributed Workplace{%- endif -%}</title>
   {% set meta_description %}
     {%- if description -%}{{ description }}{%- else -%}Whether you’ve been working remotely for many years, or are just starting out, you’ve realized that remote work can look very different. It depends on where you’re working. What you’re working on. Who you’re working for, and who you’re working with.{%- endif -%}
