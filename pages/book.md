@@ -33,17 +33,17 @@ Using the connective power of storytelling, Scott shares how his cumulative work
 <br />
 <br />
 <img src="/static/img/Valentina-Thorner.jpg">
-Scott has been working remotely longer than anyone I know. When he started working from home over two decades ago there were hardly any resources available. Distributed work wasn’t really a thing yet, co-working spaces were far and wide in between, and today’s communities around location independent jobs did not exist. But Scott knew what he wanted - so he had to figure out a way to make it work. I was lucky enough to get a pre-release of the book, and I loved it! Whether you are already working remote, or whether you are considering starting in a distributed company - this book will make you more productive and ensure that you don’t lose your personal life in the process. And if you lead (or plan to lead) a remote team, the book can help you to level up your team - you might even consider it required reading for every new hire.  
+Scott has been working remotely longer than anyone I know. When he started working from home over two decades ago there were hardly any resources available. Distributed work wasn’t really a thing yet, co-working spaces were far and wide in between, and today’s communities around location independent jobs did not exist. But Scott knew what he wanted - so he had to figure out a way to make it work. I was lucky enough to get a pre-release of the book, and I loved it! Whether you are already working remote, or whether you are considering starting in a distributed company - <b>this book will make you more productive and ensure that you don’t lose your personal life in the process</b>. And if you lead (or plan to lead) a remote team, the book can help you to level up your team - you might even consider it required reading for every new hire.  
 <i>— Valentina Thörner, Head of Product at <a href="https://klausapp.com">Klaus</a></i>
     </div>
     <div>
 <img src="/static/img/farrer.jpg">
-The Art of Working Remotely proves an essential point that is often misunderstood in the business world: that remote work is still work. Telecommuting from a home or mobile office does not reduce the need for professional skills or the ability to navigate social dynamics. In fact, it often demands even more emotional intelligence and self-management. Mr. Dawson's personal account is a prime example that **anyone can thrive both personally and professionally in an offsite environment when the worker takes the responsibility of autonomy seriously**.  
+The Art of Working Remotely proves an essential point that is often misunderstood in the business world: that remote work is still work. Telecommuting from a home or mobile office does not reduce the need for professional skills or the ability to navigate social dynamics. In fact, it often demands even more emotional intelligence and self-management. Mr. Dawson's personal account is a prime example that <b>anyone can thrive both personally and professionally in an offsite environment when the worker takes the responsibility of autonomy seriously</b>.  
 <i>— Laurel Farrer, <a href="https://www.laurelfarrer.com/">Remote Work Consultant</a> and Founder of <a href="https://www.remoteworkassociation.com/">The Remote Association</a></i>
 <br />
 <br />
 <img src="/static/img/engst.jpeg">
-Scott Dawson joined my cross country team several years ago. In training runs and at races, he told me about his various projects: drawing every day for a year, taking the lead in a local play, creating a photo book with hundreds of images for his daughter's graduation. I thought, “How does he possibly find the time?!?" After reading "The Art of Working Remotely," I know the answer. Scott lives more intentionally than anyone I've ever met, and **the keen advice he dispenses with wit and anecdote in this book grows from that intentionality**. Read it and you, too, can apply his lessons to your remote career.  
+Scott Dawson joined my cross country team several years ago. In training runs and at races, he told me about his various projects: drawing every day for a year, taking the lead in a local play, creating a photo book with hundreds of images for his daughter's graduation. I thought, “How does he possibly find the time?!?" After reading "The Art of Working Remotely," I know the answer. Scott lives more intentionally than anyone I've ever met, and <b>the keen advice he dispenses with wit and anecdote in this book grows from that intentionality</b>. Read it and you, too, can apply his lessons to your remote career.  
 <i>— Adam Engst, Publisher of <a href="https://tidbits.com/">TidBITS</a> and <a href="https://www.strava.com/clubs/65484">High Noon Cross Country Team Captain</a></i>
     </div>
 </div>
@@ -54,10 +54,13 @@ It's fantastic to hear about all of the book clubs, groups of colleagues, and co
 
 ## News & Press
 
-Check out the [press section](/press/) for coverage of The Art of Working Remotely, and also these two announcement posts related to the publishing of the book:
+Check out the [press section](/press/) for coverage of The Art of Working Remotely, and also these book-related posts:
 
- - [The Art of Working Remotely: LAUNCH DAY!](/news/art-of-working-remotely-launch-day)
- - [Free Download: The Space and the Habits That Can Help You Thrive as a Remote Worker](/news/free-download-for-remote-workers)
+<ul class="post-list">
+    {%- for item in collections.news | reverse  -%}
+    {% include '_includes/components/post-teaser-condensed.njk' %}
+    {%- endfor -%}
+</ul>
 
 ## Have you read the book?
 
