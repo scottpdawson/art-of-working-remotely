@@ -10,7 +10,7 @@ eleventyNavigation:
 
 ## If you like [#RemoteChat](/remotechat/), you'll love The Art of Working Remotely!
 
-US-based buyers can [purchase directly from Knight Rose Press](https://knightrosepress.square.site) for a special autographed gift, including a _limited-edition_ remote work sticker sheet! Other purchase options:
+US-based buyers can [purchase directly from Knight Rose Press](https://knightrosepress.square.site) for a special autographed gift, including a remote work sticker! Other purchase options:
 
 - [Amazon.com](https://www.amazon.com/dp/1733991301)
 - [Barnes & Noble](https://www.barnesandnoble.com/w/the-art-of-working-remotely-scott-dawson/1132412174?ean=9781733991308)
