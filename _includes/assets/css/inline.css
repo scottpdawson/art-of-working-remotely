@@ -825,9 +825,7 @@ p code {
     display: flex;
     align-items: center;
     justify-content: center;
-	min-height: 100vh;
-	min-height: -webkit-fill-available;
-	height: 100vh;
+	height: calc(100 * var(--vh));
     flex: 0 1 auto;
 	background: #ffbf4966;
 	background: top center url(/static/img/art_working_remotely_hed.png);

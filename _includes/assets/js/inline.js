@@ -8,6 +8,11 @@ if (window.netlifyIdentity) {
   });
 }
 
+window.addEventListener('resize', () => { 
+  document.querySelector(':root').style
+    .setProperty('--vh', window.innerHeight/100 + 'px');
+})
+
 document.addEventListener("DOMContentLoaded", function() {
   var lazyloadImages;    
 
