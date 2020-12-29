@@ -1,0 +1,32 @@
+<!doctype html>
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+	{% include "components/head.njk" %}
+	<body class="solo-no-nav">
+		<div class="solo-header">
+			<a href="/"><img src="/static/img/art_working_remotely_logo.png" class="avatar" title="The Art of Working Remotely" /></a>	
+		</div>
+		<div class="main">
+			<div class="container">
+				<main>
+					<div class="twitter-share">
+						<a href="https://twitter.com/intent/tweet?url=https://artofworkingremotely.com/365-distributed-work-tips/{{date | momentMonth | slug}}/{{date | momentDay | slug}}&text=Distributed Work Tip No. {{ postNumber }}: {{ description }} via @workingrem and @scottpdawson #365DistributedWorkTips" class="bordered-pill" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+					</div>
+					<div class="tip-date bordered-pill">
+						{{ mmm }} {{ dd }}
+					</div>
+					<h1>{{ description | safe }}</h1>
+					{{ content | safe }}
+				</main>
+			</div>
+		</div>
+		<div class="navigation">
+			<a href="{{ prevPost.url }}" class="bordered-pill" title="Previous Tip"><i class="fas fa-angle-left"></i></a>
+			<a href="{{ nextPost.url }}" class="bordered-pill" title="Next Tip"><i class="fas fa-angle-right"></i></a>
+		</div>
+		<div class="solo-footer">
+			<a href="https://twitter.com/search?q=(%23365DistributedWorkTips)%20(from%3Aworkingrem)%20until%3A2021-12-31%20since%3A2021-01-01&src=typed_query&f=live">#365DistributedWorkTips</a>
+			via 
+			<a href="https://twitter.com/workingrem">@workingrem</a>
+		</div>
+	</body>
+</html>

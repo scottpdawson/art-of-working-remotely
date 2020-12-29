@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "The Art of Working Remotely",
   "scripts": {
+    "social-images": "eleventy-social-images --siteName 'The Art of Working Remotely' --templatePath social/template.html",
     "start": "npx eleventy --serve --quiet",
-    "build": "npx eleventy",
+    "build": "npx eleventy ; npm run social-images",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy"
   },
@@ -32,6 +33,7 @@
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.5",
+    "@11tyrocks/eleventy-plugin-social-images": "^0.1.2",
     "@fortawesome/fontawesome-free": "^5.13.1",
     "clean-css": "^4.2.1",
     "eleventy-plugin-cloudinary": "0.0.1",

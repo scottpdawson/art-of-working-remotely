@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --minimal: linear-gradient(to top, #ffbf4966,#00ab0466);
+            --background: var(--minimal);
+        }
+
+        body {
+            display: grid;
+            place-content: center;
+            text-align: center;
+            font-family: "Oswald";
+            min-height: 100vh;
+            background: var(--background);
+            color: black;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            line-height: 3rem;
+            border-bottom: 3px double #fdbe00;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+        i {
+            opacity: .5;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Content Headline</h1>
+        <p>
+            #365DistributedWorkTips<br /><i>via</i> {{ siteName }}
+        </p>
+      </div>
+    </header>
+  </body>
+</html>

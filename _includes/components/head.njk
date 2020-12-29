@@ -28,14 +28,20 @@
   <meta name="twitter:site" content="@workingrem" />
   <meta name="twitter:creator" content="@workingrem" />
   <meta name="twitter:description" content="{{ meta_description }}"/>
+  {%- if permalink.indexOf('365-distributed-work-tips') !== -1 -%}
+    {%- set pageSocialImg %}https://artofworkingremotely.com/previews/{{date | momentMonth | slug}}-{{date | momentDay | slug}}.png{% endset -%}
+    <meta property="og:image" content="{{pageSocialImg}}" />
+    <meta name="twitter:image" content="{{pageSocialImg}}" />
+  {%- else -%}
+    <meta property="og:image" content='https://artofworkingremotely.com/static/img/og-image.jpg' />
+  {%- endif -%}
   {%- if category -%}
   <meta property="og:url" content="https://artofworkingremotely.com/{{navigation | slug}}/{{category | slug}}/{{title | removeNonAlpha | slug}}/" />
   {%- else -%}
-  <meta property="og:url" content="https://artofworkingremotely.com/{%- if permalink !== '/' -%}{{ permalink }}{%- endif -%}" />
+  <meta property="og:url" content="https://artofworkingremotely.com/{%- if permalink.indexOf('365-distributed-work-tips') !== -1 -%}365-distributed-work-tips/{{date | momentMonth | slug}}/{{date | momentDay | slug}}/{%- elif permalink !== '/' -%}{{ permalink }}{%- endif -%}" />
   {%- endif -%}
   <meta property="og:title" content="{%- if title !== 'Welcome' -%}{{ title }} | The Art of Working Remotely{%- else -%}The Art of Working Remotely – How to Thrive in a Distributed Workplace{%- endif -%}" />
   <meta property="og:description" content="{{ meta_description }}"/>
-  <meta property="og:image" content='https://artofworkingremotely.com/static/img/og-image.jpg' />
   <meta property="og:image:width" content='1200' />
   <meta property="og:image:height" content='630' />
   <link rel="icon" type="image/png" sizes="512x512"  href="/static/img/android-chrome-512x512.png">

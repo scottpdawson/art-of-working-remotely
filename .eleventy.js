@@ -58,6 +58,30 @@ module.exports = function(eleventyConfig) {
     return minified.code;
   });
 
+  eleventyConfig.addFilter("momentMonth", dateObj => {
+    return moment.utc(dateObj).format('MMMM');
+  });
+
+  eleventyConfig.addFilter("momentDay", dateObj => {
+    return moment.utc(dateObj).format('D');
+  });
+
+  eleventyConfig.addCollection("yeartips", function(collection) {
+    const coll = collection.getFilteredByGlob("posts/365-day-wfh-tips/*.md");
+  
+    for(let i = 0; i < coll.length ; i++) {
+      const prevPost = i === 0 ? coll[coll.length - 1] : coll[i - 1];
+      const nextPost = i === coll.length - 1 ? coll[0] : coll[i + 1];
+  
+      coll[i].data["prevPost"] = prevPost;
+      coll[i].data["nextPost"] = nextPost;
+
+      coll[i].data["postNumber"] = i + 1;
+    }
+  
+    return coll;
+  });
+
   eleventyConfig.addCollection("communication", (collection) => {
     return collection.getFilteredByGlob("posts/*.md").filter( item => {
       const category = item.data.category;
@@ -126,6 +150,9 @@ module.exports = function(eleventyConfig) {
   );
 
   eleventyConfig.addCollection("tagList", require("./utils/getTagList.js"));
+
+  const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
+  eleventyConfig.addPlugin(socialImages);
 
   const embedVimeo = require("eleventy-plugin-vimeo-embed");
   eleventyConfig.addPlugin(embedVimeo);

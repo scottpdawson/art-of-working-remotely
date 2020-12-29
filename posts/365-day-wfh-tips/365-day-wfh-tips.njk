@@ -1,0 +1,14 @@
+---
+permalink: ./pages.json
+permalinkBypassOutputDir: true
+eleventyExcludeFromCollections: true
+layout: null
+---
+[
+{%- for pages in collections.yeartips %}
+    {
+      "title":"{{ pages.data.description | addNbsp | safe }}",
+      "imgName":"{{ pages.data.date | momentMonth | slug }}-{{pages.data.date | momentDay | slug}}"
+    }{% if loop.last == false %},{% endif -%}
+{% endfor %}
+]

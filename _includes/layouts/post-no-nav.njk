@@ -1,0 +1,12 @@
+---
+layout: layouts/base-no-nav.njk
+section: post
+eleventyComputed:
+  title: "365 Days of Distributed Work Tips: {{date | momentMonth}} {{date | momentDay | slug}}"
+  mmm: "{{date | momentMonth}}"
+  dd: "{{date | momentDay | slug}}"
+---
+
+<article>
+  {{ content | safe }}
+</article>
