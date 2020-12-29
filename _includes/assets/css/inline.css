@@ -883,6 +883,11 @@ p code {
 .solo-no-nav .navigation {
 	margin-top: auto;
 }
+@media (max-width: 400px) {
+	.solo-no-nav .solo-footer {
+		margin-bottom: 50px;
+	}
+}
 .solo-no-nav .navigation a {
 	width: 44px;
 	height: 44px;
