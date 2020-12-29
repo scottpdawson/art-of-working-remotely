@@ -825,10 +825,10 @@ p code {
     display: flex;
     align-items: center;
     justify-content: center;
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
 	height: 100vh;
     flex: 0 1 auto;
-	background: gray;
-	min-height: -webkit-fill-available;
 	background: #ffbf4966;
 	background: top center url(/static/img/art_working_remotely_hed.png);
 	background: top center url(/static/img/art_working_remotely_hed.png),linear-gradient(#ffbf4966,#00ab0466);
@@ -846,6 +846,7 @@ p code {
 }
 .solo-no-nav h1 {
 	text-align: left;
+	font-size: 1.7em;
 }
 .solo-no-nav .solo-header {
 	margin-bottom: auto;
@@ -853,7 +854,7 @@ p code {
 .solo-no-nav .solo-footer {
 	margin-top: 10px;
 	margin-bottom: 10px;
-    background: #00000033;
+    background: #ffffff55;
     width: calc(100% - 20px);
     border-radius: 4px;
 	padding: .3em;
