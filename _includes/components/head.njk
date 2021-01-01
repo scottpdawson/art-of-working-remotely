@@ -29,7 +29,7 @@
   <meta name="twitter:creator" content="@workingrem" />
   <meta name="twitter:description" content="{{ meta_description }}"/>
   {%- if permalink.indexOf('365-distributed-work-tips') !== -1 -%}
-    {%- set pageSocialImg %}https://artofworkingremotely.com/previews/{{date | momentMonth | slug}}-{{date | momentDay | slug}}.png{% endset -%}
+    {%- set pageSocialImg %}https://artofworkingremotely.com/previews/{{date | momentMonth | slug}}-{{date | momentDay | slug}}.png?yr=2021{% endset -%}
     <meta property="og:image" content="{{pageSocialImg}}" />
     <meta name="twitter:image" content="{{pageSocialImg}}" />
   {%- else -%}
