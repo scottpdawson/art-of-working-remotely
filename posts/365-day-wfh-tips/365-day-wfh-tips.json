@@ -1,6 +1,6 @@
 {
   "layout": "layouts/post-no-nav.njk",
-  "permalink": "365-distributed-work-tips/{{date | momentMonth | slug}}/{{date | momentDay | slug}}/",
+  "permalink": "365-distributed-work-tips/{{date | momentYear | slug}}/{{date | momentMonth | slug}}/{{date | momentDay | slug}}/",
   "tags": [
     "post"
   ],

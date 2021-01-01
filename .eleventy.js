@@ -58,6 +58,10 @@ module.exports = function(eleventyConfig) {
     return minified.code;
   });
 
+  eleventyConfig.addFilter("momentYear", dateObj => {
+    return moment.utc(dateObj).format('YYYY');
+  });
+  
   eleventyConfig.addFilter("momentMonth", dateObj => {
     return moment.utc(dateObj).format('MMMM');
   });
