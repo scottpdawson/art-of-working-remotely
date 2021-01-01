@@ -13,6 +13,8 @@ Whether you’ve been working remotely for many years, or are just starting out,
 
 I’ve worked remotely since 1998, and I realized that I have a lot to share so others wouldn’t have to learn the hard lessons (per se). We all have a lot to share. **So let’s do that.**
 
-First, you should totally jump into one of the weekly [#RemoteChat](/remotechat/) Twitter sessions. They’re a lot of fun, and a great way to meet other people who also work remotely. Twitter not your thing? No problem. There’s plenty to see on this site, and if you get FOMO from time to time, just [subscribe to get updates](http://eepurl.com/dw045L). Next, roll up your sleeves and check out one of the many [topical pages about remote work](/topics/) on this site.
+First, check out [2021's #365DistributedWorkTips project](/news/365-distributed-work-tips/). By the end of the year, it should be rather impressive to look back at 365 (hopefully inspiring) pieces of advice. They'll be related in some way to success at work or life, with a distinct leaning toward thriving in a distributed workplace.
+
+Then, you should make a habit of participating in the weekly [#RemoteChat](/remotechat/) Twitter chats. They’re a lot of fun, and a great way to meet other people who also work remotely. Twitter not your thing? No problem. There’s plenty to see on this site, and if you get FOMO from time to time, just [subscribe to get updates](http://eepurl.com/dw045L). Next, roll up your sleeves and check out one of the many [topical pages about remote work](/topics/) on this site.
 
 **Thanks for stopping by.** Enjoy the site. Read [The Art of Working Remotely](/book). Enjoy [#RemoteChat](/remotechat/). And most importantly, enjoy everything that working remotely can offer you. It’s a great way to live and work!
