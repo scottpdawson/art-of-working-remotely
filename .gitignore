@@ -1,7 +1,6 @@
 _site/
 node_modules/
 package-lock.json
-static/img/previews/
 
 # Local Netlify folder
 .netlify
