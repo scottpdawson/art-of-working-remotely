@@ -7,7 +7,7 @@
     "build": "npx eleventy && npm run social-images",
     "watch": "npx eleventy --watch",
     "debug": "DEBUG=* npx eleventy",
-    "social-images": "eleventy-social-images --siteName 'The Art of Working Remotely' --templatePath social/template.html"
+    "social-images": "eleventy-social-images --outputDir _includes/assets --siteName 'The Art of Working Remotely' --templatePath social/template.html"
   },
   "repository": {
     "type": "git",
