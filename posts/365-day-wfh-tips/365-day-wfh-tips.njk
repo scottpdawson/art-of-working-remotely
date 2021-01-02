@@ -8,7 +8,7 @@ layout: null
 {%- for pages in collections.yeartips %}
     {
       "title":"{{ pages.data.description | addNbsp | safe }}",
-      "imgName":"{{ pages.data.date | momentMonth | slug }}-{{pages.data.date | momentDay | slug}}"
+      "imgName":"{{ pages.data.date | momentYear | slug }}-{{ pages.data.date | momentMonth | slug }}-{{pages.data.date | momentDay | slug}}"
     }{% if loop.last == false %},{% endif -%}
 {% endfor %}
 ]
