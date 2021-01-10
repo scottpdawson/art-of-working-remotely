@@ -8,6 +8,25 @@ if (window.netlifyIdentity) {
   });
 }
 
+function copyShareText() {
+  /* Get the text field */
+  var copyText = document.getElementById("share-text");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+  toastNotifier();
+}
+
+function toastNotifier() {
+  var x = document.getElementById("share-text-notifier")
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 5000);
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   var lazyloadImages;    
 

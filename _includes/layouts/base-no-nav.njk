@@ -3,13 +3,24 @@
 	{% include "components/head.njk" %}
 	<body class="solo-no-nav">
 		<div class="solo-header">
+			<div id="share-text-notifier">Share text was copied to your clipboard. Now you can paste it wherever you'd like.</div>	
 			<a href="/"><img src="/static/img/art_working_remotely_logo.png" class="avatar" title="The Art of Working Remotely" /></a>	
 		</div>
 		<div class="main">
 			<div class="container">
 				<main>
-					<div class="twitter-share">
-						<a href="https://twitter.com/intent/tweet?url=https://artofworkingremotely.com/365-distributed-work-tips/{{date | momentYear | slug}}/{{date | momentMonth | slug}}/{{date | momentDay | slug}}&text=Distributed Work Tip No. {{ postNumber }}: {{ description }} via @workingrem and @scottpdawson %23365DistributedWorkTips" class="bordered-pill" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+					<input type="text" value="Distributed Work Tip No. {{ postNumber }}: {{ description }} via @workingrem and @scottpdawson #365DistributedWorkTips https://artofworkingremotely.com/365-distributed-work-tips/{{date | momentYear | slug}}/{{date | momentMonth | slug}}/{{date | momentDay | slug}}" id="share-text">
+					<div class="copy-share social-share">
+						<a href="javascript:void(0)" onClick="copyShareText()" class="bordered-pill" title="Copy Share Text"><i class="far fa-copy"></i></a>
+					</div>
+					<div class="linkedin-share social-share">
+						<a target="_blank" rel="noopener noreferrer" href="http://www.linkedin.com/shareArticle?mini=true&url=https://artofworkingremotely.com/365-distributed-work-tips/{{date | momentYear | slug}}/{{date | momentMonth | slug}}/{{date | momentDay | slug}}&title=Distributed Work Tip No. {{ postNumber }}: {{ description }} via @workingrem and @scottpdawson %23365DistributedWorkTips" class="bordered-pill" title="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+					</div>
+					<div class="facebook-share social-share">
+						<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https://artofworkingremotely.com/365-distributed-work-tips/{{date | momentYear | slug}}/{{date | momentMonth | slug}}/{{date | momentDay | slug}}" class="bordered-pill" title="Share on Facebook"><i class="fab fa-facebook"></i></a>
+					</div>
+					<div class="twitter-share social-share">
+						<a target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?url=https://artofworkingremotely.com/365-distributed-work-tips/{{date | momentYear | slug}}/{{date | momentMonth | slug}}/{{date | momentDay | slug}}&text=Distributed Work Tip No. {{ postNumber }}: {{ description }} via @workingrem and @scottpdawson %23365DistributedWorkTips" class="bordered-pill" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
 					</div>
 					<div class="tip-date bordered-pill">
 						{{ mmm }} {{ dd }}

@@ -38,7 +38,7 @@
   {%- if category -%}
   <meta property="og:url" content="https://artofworkingremotely.com/{{navigation | slug}}/{{category | slug}}/{{title | removeNonAlpha | slug}}/" />
   {%- else -%}
-  <meta property="og:url" content="https://artofworkingremotely.com/{%- if permalink.indexOf('365-distributed-work-tips') !== -1 -%}365-distributed-work-tips/{{date | momentMonth | slug}}/{{date | momentDay | slug}}/{%- elif permalink !== '/' -%}{{ permalink }}{%- endif -%}" />
+  <meta property="og:url" content="https://artofworkingremotely.com/{%- if permalink.indexOf('365-distributed-work-tips') !== -1 -%}365-distributed-work-tips/{{date | momentYear | slug}}/{{date | momentMonth | slug}}/{{date | momentDay | slug}}/{%- elif permalink !== '/' -%}{{ permalink }}{%- endif -%}" />
   {%- endif -%}
   <meta property="og:title" content="{%- if title !== 'Welcome' -%}{{ title }} | The Art of Working Remotely{%- else -%}The Art of Working Remotely – How to Thrive in a Distributed Workplace{%- endif -%}" />
   <meta property="og:description" content="{{ meta_description }}"/>
