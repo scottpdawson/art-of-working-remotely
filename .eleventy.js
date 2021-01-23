@@ -161,13 +161,13 @@ module.exports = function(eleventyConfig) {
   const embedVimeo = require("eleventy-plugin-vimeo-embed");
   eleventyConfig.addPlugin(embedVimeo);
 
-  // const pluginEmbedTweet = require("eleventy-plugin-embed-tweet");
-  // let tweetEmbedOptions = {
-  //     useInlineStyles: true,
-  //     autoEmbed: true,
-  // }
-  // eleventyConfig.addPlugin(pluginEmbedTweet, tweetEmbedOptions);
-  eleventyConfig.addShortcode("tweet", require("./utils/tweet-static-embed.js"));
+  const pluginEmbedTweet = require("eleventy-plugin-embed-tweet");
+  let tweetEmbedOptions = {
+      useInlineStyles: true,
+      autoEmbed: true,
+  }
+  eleventyConfig.addPlugin(pluginEmbedTweet, tweetEmbedOptions);
+  // eleventyConfig.addShortcode("tweet", require("./utils/tweet-static-embed.js"));
 
   const embedInstagram = require("eleventy-plugin-embed-instagram");
   eleventyConfig.addPlugin(embedInstagram);

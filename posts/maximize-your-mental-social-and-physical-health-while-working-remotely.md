@@ -14,8 +14,6 @@ Variety is the spice of life. It's no different for your brain! When you're work
 
 Laurel talks about how she builds variety into her work, accepting jobs that challenge her creativity. She also takes time to record and celebrate her progress. That's SO important: look up every once in awhile and recognize the work that you've done!
 
-{% tweet "991740724176740353" %}
-
 When you're working, you can stave off mental fatigue by playing music, or using ambient noise services like [brain.fm](https://www1.brain.fm/). Most importantly, though, recognize that it's not all about the work. Set hours that you'll start and finish for the day and try to keep to them.
 
 ## Social
