@@ -31,6 +31,11 @@ eleventyNavigation:
 - [Remote Worker Wellness: Making Time for Food, Fitness, and a Chore (Not More)](https://www.workplaceless.com/blog/remote-worker-wellness-making-time-for-breaks) (Workplaceless)
 - [How to Find (or Build!) a Community When You're Working Remotely](https://www.sococo.com/how-to-find-or-build-a-community-when-youre-working-remotely/) (Sococo)
 
+## Book Lists
+- [Goodreads Best Books for Remote Workers](https://www.goodreads.com/list/show/142082.Best_Books_for_Remote_Workers)
+- [BookAuthority's Best Remote Working Books of All Time](https://bookauthority.org/books/best-remote-working-books)
+- [70 Remote Work Books for Your Home Office Shelf](https://buildremote.co/products/books/work-from-home-books/)
+
 ## Press Inquiries
 
 Scott is available as a guest panelist for remote work webinars and similar events. You may also fill out this form for article and comment requests.
