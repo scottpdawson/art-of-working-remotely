@@ -6,7 +6,7 @@ category: "Discipline"
 description: "The reality is that some companies watch their employees. Some companies watch more closely than others. The deployment of surveillance technology is a canary in the coalmine. It's a warning that there are larger, more systemic problems at play."
 ---
 
-The article started with a pad of paper resting on a keyboard. See, we had a problem at work where a user’s inadvertent repeating keystroke wreaked all kinds of havoc on our server. This reminded me of a trend, post-pandemic, where I saw several videos of innovative people, in a bid to keep up appearances of being online and productive, [hooking up their mice to oscillating fans](https://youtu.be/MWMO6uNTKTo). There are several of these gems out there.
+This article started with a pad of paper resting on a keyboard. See, we had a problem at work where a user’s inadvertent repeating keystroke wreaked all kinds of havoc on our server. This reminded me of a trend, post-pandemic, where I saw several videos of innovative people, in a bid to keep up appearances of being online and productive, [hooking up their mice to oscillating fans](https://youtu.be/MWMO6uNTKTo). There are several of these gems out there.
 
 In the course of trying to find one of those videos, I came across Microsoft's [Move Mouse](https://www.microsoft.com/en-us/p/move-mouse) utility. Now, this is _different_. This, from a major tech company, advertised as "a simple utility that can be used to simulate user activity." Their product, a software solution to keeping your machine awake, is described thusly: 
 
