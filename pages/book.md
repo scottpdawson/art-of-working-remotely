@@ -10,7 +10,7 @@ eleventyNavigation:
 
 ## If you like [#RemoteChat](/remotechat/), you'll love The Art of Working Remotely!
 
-US-based buyers can a special autographed copy (including a custom remote work sticker) [directly from Knight Rose Press](https://knightrosepress.square.site). 
+US-based buyers can a special autographed copy (including a custom remote work sticker) [directly from Knight Rose Press](https://checkout.square.site/buy/PRO7NMBMO5QTUWFC5KI4MNBO). 
 
 Buy the book today at:
 
