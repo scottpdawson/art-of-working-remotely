@@ -6,7 +6,7 @@ category: "Communication"
 description: "When you're working remotely with colleagues, people you're managing, or clients, it's important to takes proactive steps to avoid communication issues before they happen."
 ---
 
-When you're working remotely with colleagues, people you're managing, or clients, it's important to takes proactive steps to avoid communication issues before they happen. There's a few things you can do regularly to help have a healthy relationship while you're virtual:
+When you're working remotely with colleagues, people you're managing, or clients, it's important to take proactive steps to avoid communication issues before they happen. There are a few things you can do regularly to help have a healthy relationship while you're virtual:
 
 1. **Check in regularly** Schedule regular calls, video chats or meetings with people. These can be with a full team, and/or 1:1. A side benefit of scheduling is communicating that "my relationship with you is important enough to me to check in regularly."
 2. **Be accessible** Make sure people know how to get in touch with you. If you work in different time zones, make sure people know the best way to get in touch with you if something is urgent. There's nothing worse than having to wait an entire day because you couldn't get a question answered.
