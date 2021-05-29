@@ -6,6 +6,18 @@ category: "Workspace"
 description: "I was intrigued when AfterShokz started advertising OpenComm as a solution for remote workers. OpenComm is a version of AfterShokz’s bone-conduction open-ear Bluetooth headsets paired with a DSP noise-canceling boom microphone."
 ---
 
+## TL;DR
+
+[OpenComm](https://us.aftershokz.com/products/opencomm) is a version of AfterShokz’s bone-conduction open-ear Bluetooth headsets paired with a DSP noise-canceling boom microphone. I love these for three key reasons: 
+
+1. the open-ear nature of the technology
+2. the compact design of the boom microphone coupled with effective noise cancellation 
+3. the lightness and “feel” of the headphones 
+
+The only drawbacks I can think of are that switching between computers and iOS devices could be a little tricky (see their instructions for [multipoint pairing](https://help.aftershokz.com/hc/en-us/articles/360053359094-Commands-OpenComm), regardless), and you might find yourself opting for the mute function of your phone or collaboration software instead of the headphone's mute function. 
+
+## The Background
+
 I started using bone conduction Bluetooth headphones years ago when AfterShokz came out with their first-generation models. I’m a runner and was sold on the open-ear design. On the trail, I was excited to be able to hear wildlife or other people around me. On the road, I’d be much safer if I could hear traffic behind me. With bone conduction technology your ear canals are not obstructed while music or podcasts are playing. You can enjoy your media and experience the world around you. I started using the AfterShokz Titanium model but they proved to be heavy and pinched my temples a bit too much. When AfterShokz released their lighter Air model, I got a pair and liked them much better. They were lighter and had a better bass response. The only time I don’t use them while running is in the winter when I wear a tight over-the-ear hat. In those cases, I go without music or use AirPods. 
 
 {% picture "/static/img/aftershokz-taughannock.jpg", "Using AfterShokz Titanium on a run." %}
@@ -50,7 +62,13 @@ I never used the built-in mute function; I prefer to use the device or applicati
 
 I like the option to get up and move around while wearing these. I enjoyed the same flexibility when using wired headphones with my phone, but I can walk anywhere within the Bluetooth range of my computer with these. It’s a lot easier. 
 
-Overall, I love these for three key reasons: 1) the open-ear nature of the technology, 2) the compact design of the boom microphone coupled with effective noise cancellation, and 3) the lightness and “feel” of the headphones. They’ve been my go-to solution for audio at work for the past few weeks. I look forward to many years of enjoying them. 
+Overall, I love these for three key reasons: 
+
+1. the open-ear nature of the technology
+2. the compact design of the boom microphone coupled with effective noise cancellation 
+3. the lightness and “feel” of the headphones 
+
+They’ve been my go-to solution for audio at work for the past few weeks. I look forward to many years of enjoying them. 
 
 ## Learn More
 - [AfterShokz OpenComm](https://us.aftershokz.com/products/opencomm)
