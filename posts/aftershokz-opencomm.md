@@ -20,7 +20,7 @@ The only drawbacks I can think of are that switching between computers and iOS d
 
 I started using bone conduction Bluetooth headphones years ago when AfterShokz came out with their first-generation models. I’m a runner and was sold on the open-ear design. On the trail, I was excited to be able to hear wildlife or other people around me. On the road, I’d be much safer if I could hear traffic behind me. With bone conduction technology your ear canals are not obstructed while music or podcasts are playing. You can enjoy your media and experience the world around you. I started using the AfterShokz Titanium model but they proved to be heavy and pinched my temples a bit too much. When AfterShokz released their lighter Air model, I got a pair and liked them much better. They were lighter and had a better bass response. The only time I don’t use them while running is in the winter when I wear a tight over-the-ear hat. In those cases, I go without music or use AirPods. 
 
-{% picture "/static/img/aftershokz-taughannock.jpg", "Using AfterShokz Titanium on a run." %}
+{% picture "/static/img/aftershokz-taughannock.jpg", "Using AfterShokz Air on a run." %}
 
 I was intrigued when AfterShokz started advertising [OpenComm](https://us.aftershokz.com/products/opencomm) as a solution for remote workers. I’ve been working remotely since 1998 and have constantly experimented with my audio for phone calls and conference calls. I’ve used Plantronics headsets, my cell phone with wired earbuds, and lately, a quality Bluetooth microphone and bookshelf speakers. I wrote to AfterShokz and asked if I could review the product as a remote worker. They gave me this product to try and I’ve been using it for the past two weeks. 
 
