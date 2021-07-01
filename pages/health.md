@@ -25,7 +25,7 @@ Everyone has different sleep requirements and habits, but if you’re getting si
 
 ## Mindfulness and Relaxation
 
-Meditation. Yoga. Acupuncture. Massage. There are myriad options for mindfulness and relaxation, and they can/should be an essential part of my fitness regimen. You might find that it's useful to set a monthly reminder to schedule these appointments so they don’t fall by the wayside.
+Meditation. Yoga. Acupuncture. Massage. There are myriad options for mindfulness and relaxation, and they can/should be an essential part of any fitness regimen. You might find that it's useful to set a monthly reminder to schedule these appointments so they don’t fall by the wayside.
 
 ## Sick Days & Well Visits
 
