@@ -6,6 +6,10 @@ eleventyNavigation:
   order: 4
 ---
 
+**Programming Note**: December 15, 2021 marks [the last #RemoteChat](/news/the-end-of-the-remotechat-journey/). It's been a wonderful 5 year journey!
+
+<hr />
+
 Do you work remotely? #RemoteChat is a weekly Twitter chat for remote workers. There's a solid group of frequent chatters and it's a great way to get to know remote workers from all over the world!
 
 ## How do you #RemoteChat? It's easy!
