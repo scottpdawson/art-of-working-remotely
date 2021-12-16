@@ -16,7 +16,7 @@ If you've read some of the early reviews of the book, you'll understand that thi
 
 Of course, the book covers the "bread and butter" of getting started working remotely: your environment. Whether it’s your workspace, WiFi, or your wardrobe, the key is make sure you’re as comfortable as possible and positioned for peak productivity. You'll also read about the habits of a quality remote worker. At the end of the day, we’re all human, and have different ways of managing, communicating, learning, and coping with being in different environments.
 
-That said, there’s no one-size-fits-all advice that anyone can dispense. We can all share our successes and trials, though. We can all learn from each other’s experiences. I encourage you to reach out to other remote workers through this site, [#RemoteChat](/remotechat/), or any of the other fantastic networks that are (or will be) available to support this fantastic way of working.
+That said, there’s no one-size-fits-all advice that anyone can dispense. We can all share our successes and trials, though. We can all learn from each other’s experiences. I encourage you to reach out to other remote workers through any of the fantastic networks that are (or will be) available to support this fantastic way of working.
 
 I've always enjoyed writing, but this is the biggest writing project I've completed so far. It marks the beginning of my journey as an author. As we weave our way through the coming year, I'm going to be working on another writing project. This one's for the tween set, but based on early beta reading, it's going to be a fun read for people of all ages. I can't wait to work on it more, and to share it more broadly when it's ready!
 
