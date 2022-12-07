@@ -8,7 +8,7 @@ description: "Remote work isn’t always as Instagram-worthy as it may seem. In 
 
 I was intrigued when [@brhea](https://twitter.com/brhea) posed this series of tweets. I'm a remote worker in a small town, and I also struggle with how to get my "human interaction fix" during the work week. It can be a struggle for everyone, so I was grateful that Brian told me to _"go for it"_ when I asked if I could write this post. Here's how he started the conversation:
 
-{% tweet "1166445241764728832" %}
+_Brian's account no longer exists, so take my word for it ..._
 
 [I wrote an article last year about loneliness](/topics/health/shining-a-light-on-loneliness/), and lately, more people are shining a light on this drawback of working remotely. [Buffer's 2019 State of Remote Work](https://buffer.com/state-of-remote-work-2019) cited _"loneliness"_ as a key struggle, only marginally behind _"unplugging from work"_ (which I, for the record, do not struggle with).
 
