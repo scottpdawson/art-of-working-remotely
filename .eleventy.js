@@ -166,12 +166,12 @@ module.exports = function (eleventyConfig) {
   const embedVimeo = require("eleventy-plugin-vimeo-embed");
   eleventyConfig.addPlugin(embedVimeo);
 
-  const pluginEmbedTweet = require("eleventy-plugin-embed-tweet");
-  let tweetEmbedOptions = {
-    useInlineStyles: true,
-    autoEmbed: true,
-  };
-  eleventyConfig.addPlugin(pluginEmbedTweet, tweetEmbedOptions);
+  // const pluginEmbedTweet = require("eleventy-plugin-embed-tweet");
+  // let tweetEmbedOptions = {
+  //   useInlineStyles: true,
+  //   autoEmbed: true,
+  // };
+  // eleventyConfig.addPlugin(pluginEmbedTweet, tweetEmbedOptions);
   // eleventyConfig.addShortcode("tweet", require("./utils/tweet-static-embed.js"));
 
   const embedInstagram = require("eleventy-plugin-embed-instagram");
@@ -182,6 +182,8 @@ module.exports = function (eleventyConfig) {
 
   const readingTime = require("eleventy-plugin-reading-time");
   eleventyConfig.addPlugin(readingTime);
+
+  eleventyConfig.addShortcode("tweet", require("./utils/tweet.js"));
 
   eleventyConfig.addShortcode("picture", require("./utils/picture.js"));
   eleventyConfig.addShortcode("pictureRt", require("./utils/pictureRt.js"));
