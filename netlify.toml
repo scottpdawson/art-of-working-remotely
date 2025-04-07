@@ -8,7 +8,11 @@
 # Redirect rule example
 # For more information see:- https://www.netlify.com/docs/netlify-toml-reference/
 
-#[[redirects]]
+[[redirects]]
+from = "/*"
+to = "https://scottpdawson.com/writing/aowr/"
+status = 301!
+
 #  from = "/*"
 #  to = "/blog/:splat"
 
