@@ -12,6 +12,7 @@
 from = "/*"
 to = "https://scottpdawson.com/writing/aowr/"
 status = 301
+force=true
 
 #  from = "/*"
 #  to = "/blog/:splat"
